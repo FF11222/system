@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "user")
 @Table
 public class User {
     @Id
@@ -26,4 +26,9 @@ public class User {
     joinColumns = @JoinColumn(name = "User_Id"),
     inverseJoinColumns = @JoinColumn(name = "Role_Id"))
     private List<Role> roles;
+
+    @Override
+    public String toString() {
+        return id.toString() + " " + uuid.toString() + " " + name;
+    }
 }
