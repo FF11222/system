@@ -17,4 +17,9 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> getAll() {
         return dao.findAll();
     }
+
+    @Override
+    public void save(Role role) {
+        dao.save(role);
+    }
 }

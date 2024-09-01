@@ -16,4 +16,9 @@ public class DepartmentServiceImpl implements DepartmentService{
     public List<Department> getAll() {
         return dao.findAll();
     }
+
+    @Override
+    public void save(Department dept) {
+        dao.save(dept);
+    }
 }

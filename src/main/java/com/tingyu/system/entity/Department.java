@@ -13,4 +13,8 @@ public class Department {
     private String name;
     @ManyToMany(mappedBy = "departments")
     private List<User> users;
+
+    public Integer getId() {
+        return id;
+    }
 }

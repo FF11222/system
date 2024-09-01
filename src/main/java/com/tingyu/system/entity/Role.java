@@ -13,4 +13,8 @@ public class Role {
     private String name;
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
+
+    public Integer getId() {
+        return id;
+    }
 }

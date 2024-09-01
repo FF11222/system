@@ -28,10 +28,34 @@ public class User {
     inverseJoinColumns = @JoinColumn(name = "Role_Id"))
     private List<Role> roles;
 
-    @Override
-    public String toString() {
+    public Integer getUuid() {
+        return uuid;
+    }
+
+    public String getName() {
         return name;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public List<Department> getDepartments() {
+        return departments;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+//    @Override
+//    public String toString() {
+//        return name;
+//    }
 
     @Override
     public boolean equals(Object o) {
